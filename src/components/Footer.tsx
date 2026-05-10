@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Twitter, Youtube } from "lucide-react"
+import Icon from "@/components/ui/icon"
 
 export function Footer() {
   return (
@@ -7,61 +7,58 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-semibold">Horizon Voyages</h3>
+            <h3 className="text-2xl font-semibold">Фото у дома</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Создаём незабываемые путешествия по всему миру с 2010 года
+              Профессиональная фотосъёмка и печать в вашем городе с 2015 года
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Facebook className="h-5 w-5" />
+                <Icon name="Facebook" size={20} />
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Instagram className="h-5 w-5" />
+                <Icon name="Instagram" size={20} />
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                <Youtube className="h-5 w-5" />
+                <Icon name="Send" size={20} />
               </a>
             </div>
           </div>
 
-          {/* Destinations */}
+          {/* Services */}
           <div>
-            <h4 className="font-semibold mb-4">Направления</h4>
+            <h4 className="font-semibold mb-4">Услуги</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>
                 <a href="#" className="hover:text-foreground transition-colors">
-                  Европа
+                  Фото на документы
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-foreground transition-colors">
-                  Азия
+                  Семейная съёмка
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-foreground transition-colors">
-                  Африка
+                  Свадебная фотосессия
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-foreground transition-colors">
-                  Америка
+                  Детская съёмка
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-foreground transition-colors">
-                  Океания
+                  Печать фотографий
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Info */}
           <div>
-            <h4 className="font-semibold mb-4">Компания</h4>
+            <h4 className="font-semibold mb-4">Информация</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>
                 <a href="#" className="hover:text-foreground transition-colors">
@@ -70,54 +67,48 @@ export function Footer() {
               </li>
               <li>
                 <a href="#" className="hover:text-foreground transition-colors">
-                  Вакансии
+                  Цены
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-foreground transition-colors">
-                  Пресса
+                  Отзывы
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-foreground transition-colors">
-                  Блог
+                  Портфолио
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-foreground transition-colors">
-                  Партнёры
+                  Акции
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Support */}
+          {/* Contacts */}
           <div>
-            <h4 className="font-semibold mb-4">Поддержка</h4>
+            <h4 className="font-semibold mb-4">Контакты</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Центр помощи
+              <li className="flex items-center gap-2">
+                <Icon name="Phone" size={14} />
+                <a href="tel:+7" className="hover:text-foreground transition-colors">
+                  +7 (000) 000-00-00
                 </a>
               </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Связаться с нами
-                </a>
+              <li className="flex items-center gap-2">
+                <Icon name="MapPin" size={14} />
+                <span>ул. Центральная, д. 1</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Icon name="Clock" size={14} />
+                <span>Пн–Сб: 9:00–19:00</span>
               </li>
               <li>
                 <a href="#" className="hover:text-foreground transition-colors">
                   Политика конфиденциальности
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Условия использования
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Правила отмены
                 </a>
               </li>
             </ul>
@@ -126,7 +117,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>2025 Horizon Voyages. Все права защищены.</p>
+          <p>© 2025 Фото у дома. Все права защищены.</p>
         </div>
       </div>
     </footer>

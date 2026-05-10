@@ -1,25 +1,25 @@
-import { Globe, Shield, Headphones, Award } from "lucide-react"
+import Icon from "@/components/ui/icon"
 
 const features = [
   {
-    icon: Globe,
-    title: "Глобальная сеть",
-    description: "Доступ к 150+ направлениям по всему миру с местными экспертами и аутентичным опытом",
+    icon: "MapPin",
+    title: "Рядом с домом",
+    description: "Удобное расположение в центре города — не нужно ехать в другой конец, всё в шаговой доступности",
   },
   {
-    icon: Shield,
-    title: "Безопасное бронирование",
-    description: "Защищенные платежи и полная страховка путешествий для вашего спокойствия",
+    icon: "Clock",
+    title: "Быстрое исполнение",
+    description: "Фото на документы — за 15 минут, печать снимков — в день обращения",
   },
   {
-    icon: Headphones,
-    title: "Поддержка 24/7",
-    description: "Круглосуточная служба поддержки до, во время и после вашей поездки",
+    icon: "Star",
+    title: "Профессиональное качество",
+    description: "Современное оборудование и опытный фотограф с 10-летним стажем работы",
   },
   {
-    icon: Award,
-    title: "Гарантия лучшей цены",
-    description: "Конкурентные цены с гарантией лучшей цены и гибкими вариантами оплаты",
+    icon: "Heart",
+    title: "Индивидуальный подход",
+    description: "Каждый клиент особенный — найдём лучший ракурс и создадим комфортную атмосферу",
   },
 ]
 
@@ -30,10 +30,10 @@ export function WhyChooseUs() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-5xl md:text-6xl font-light tracking-tight mb-6 text-balance">
-            Почему выбирают <span className="font-semibold">Horizon Voyages</span>
+            Почему выбирают <span className="font-semibold">Фото у дома</span>
           </h2>
           <p className="text-lg text-muted-foreground text-balance leading-relaxed">
-            Мы превращаем ваши мечты о путешествиях в реальность с исключительным сервисом и незабываемыми впечатлениями
+            Мы знаем каждого клиента в лицо — в маленьком городе это главное преимущество
           </p>
         </div>
 
@@ -42,7 +42,7 @@ export function WhyChooseUs() {
           {features.map((feature, index) => (
             <div key={index} className="text-center space-y-4">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary mb-2">
-                <feature.icon className="h-8 w-8" />
+                <Icon name={feature.icon} size={32} />
               </div>
               <h3 className="text-xl font-semibold">{feature.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>

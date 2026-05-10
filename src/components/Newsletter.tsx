@@ -5,12 +5,12 @@ import { Input } from "@/components/ui/input"
 import { Send } from "lucide-react"
 
 export function Newsletter() {
-  const [email, setEmail] = useState("")
+  const [phone, setPhone] = useState("")
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Newsletter signup:", email)
-    setEmail("")
+    console.log("Contact request:", phone)
+    setPhone("")
   }
 
   return (
@@ -19,20 +19,20 @@ export function Newsletter() {
         <div className="space-y-8">
           <div className="space-y-4">
             <h2 className="text-4xl md:text-5xl font-light tracking-tight text-balance">
-              Будьте <span className="font-semibold">в курсе</span>
+              Запишитесь <span className="font-semibold">прямо сейчас</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance leading-relaxed">
-              Подпишитесь на рассылку и получайте эксклюзивные предложения, гиды по направлениям и советы от экспертов
+              Оставьте номер телефона — мы перезвоним, подберём удобное время и ответим на все вопросы
             </p>
           </div>
 
           <form onSubmit={handleSubmit} className="max-w-md mx-auto">
             <div className="flex gap-3">
               <Input
-                type="email"
-                placeholder="Ваш email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                type="tel"
+                placeholder="Ваш телефон"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
                 required
                 className="h-12 rounded-full border-2 px-6"
               />
@@ -47,7 +47,7 @@ export function Newsletter() {
           </form>
 
           <p className="text-xs text-muted-foreground">
-            Подписываясь, вы соглашаетесь с Политикой конфиденциальности и даёте согласие на получение рассылки
+            Нажимая кнопку, вы соглашаетесь с Политикой конфиденциальности и даёте согласие на обработку данных
           </p>
         </div>
       </div>

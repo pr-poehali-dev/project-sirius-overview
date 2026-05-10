@@ -1,37 +1,37 @@
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Calendar, Users, Star } from "lucide-react"
+import { Clock, Image, Star } from "lucide-react"
 
 const packages = [
   {
-    title: "Гранд-тур по Европе",
-    duration: "14 дней",
-    groupSize: "12-16 человек",
-    rating: "4.9",
-    reviews: "234",
-    image: "/european-cities-paris-eiffel-tower-romantic.jpg",
-    highlights: ["Париж", "Рим", "Барселона", "Амстердам"],
-    price: "429 900 ₽",
-  },
-  {
-    title: "Азиатское приключение",
-    duration: "10 дней",
-    groupSize: "8-12 человек",
-    rating: "4.8",
-    reviews: "189",
-    image: "/asian-temples-thailand-bangkok-golden-temple.jpg",
-    highlights: ["Бангкок", "Сингапур", "Бали", "Куала-Лумпур"],
-    price: "349 900 ₽",
-  },
-  {
-    title: "Сафари-экспедиция",
-    duration: "7 дней",
-    groupSize: "6-10 человек",
+    title: "Фото на документы",
+    duration: "15 минут",
+    prints: "4 снимка",
     rating: "5.0",
-    reviews: "156",
-    image: "/african-safari-wildlife-elephants-sunset.jpg",
-    highlights: ["Серенгети", "Масаи Мара", "Нгоронгоро", "Амбосели"],
-    price: "599 900 ₽",
+    reviews: "312",
+    image: "https://cdn.poehali.dev/projects/76514b43-4581-49b0-a1fb-2a8ebbf06283/files/64e4b053-b892-4b51-b019-6f84a89bd6de.jpg",
+    highlights: ["Паспорт РФ", "Загранпаспорт", "СНИЛС", "Водительское удостоверение"],
+    price: "200 ₽",
+  },
+  {
+    title: "Семейная фотосессия",
+    duration: "1 час",
+    prints: "20 фото в обработке",
+    rating: "4.9",
+    reviews: "187",
+    image: "https://cdn.poehali.dev/projects/76514b43-4581-49b0-a1fb-2a8ebbf06283/files/59e2fcc9-dd0d-4c54-8ece-6ccb77d13f7e.jpg",
+    highlights: ["Студийный свет", "2 смены образа", "Онлайн-галерея", "Печать 10 фото"],
+    price: "3 500 ₽",
+  },
+  {
+    title: "Свадебный пакет",
+    duration: "3 часа",
+    prints: "50 фото в обработке",
+    rating: "5.0",
+    reviews: "94",
+    image: "https://cdn.poehali.dev/projects/76514b43-4581-49b0-a1fb-2a8ebbf06283/files/80a32774-71e6-4a5a-b1cc-8e23ede7ae98.jpg",
+    highlights: ["Студия + выездная", "Фотокнига в подарок", "Онлайн-галерея", "Ретушь всех фото"],
+    price: "9 000 ₽",
   },
 ]
 
@@ -42,10 +42,10 @@ export function PopularPackages() {
         {/* Section Header */}
         <div className="max-w-3xl mb-20">
           <h2 className="text-5xl md:text-6xl font-light tracking-tight mb-6 text-balance">
-            Популярные <span className="font-semibold">туры</span>
+            Популярные <span className="font-semibold">пакеты</span>
           </h2>
           <p className="text-lg text-muted-foreground text-balance leading-relaxed">
-            Тщательно подобранные туры, объединяющие лучшие направления и впечатления
+            Готовые решения для любого повода — выбирайте и записывайтесь прямо сейчас
           </p>
         </div>
 
@@ -81,12 +81,12 @@ export function PopularPackages() {
                   {/* Meta Info */}
                   <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
                     <div className="flex items-center gap-1.5">
-                      <Calendar className="h-4 w-4" />
+                      <Clock className="h-4 w-4" />
                       <span>{pkg.duration}</span>
                     </div>
                     <div className="flex items-center gap-1.5">
-                      <Users className="h-4 w-4" />
-                      <span>{pkg.groupSize}</span>
+                      <Image className="h-4 w-4" />
+                      <span>{pkg.prints}</span>
                     </div>
                   </div>
 
@@ -107,7 +107,7 @@ export function PopularPackages() {
                     <div className="text-2xl font-semibold text-primary">{pkg.price}</div>
                   </div>
                   <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full">
-                    Забронировать
+                    Записаться
                   </Button>
                 </div>
               </div>
